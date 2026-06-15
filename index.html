@@ -10,7 +10,7 @@
 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>[[Your Name]] — Researcher</title>
+<title>JeHyeon Seong — Researcher</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,13 +18,13 @@
 
 <style>
   :root{
-    --paper:#F7F6F2;
+    --paper:#F8F9FB;
     --ink:#16181C;
-    --muted:#595D63;
-    --faint:#8B8E92;
-    --line:#E2E1DB;
-    --accent:#1F3FA8;
-    --accent-soft:rgba(31,63,168,.07);
+    --muted:#565B62;
+    --faint:#8A8E94;
+    --line:#E4E6EA;
+    --accent:#1D4ED8;
+    --accent-soft:rgba(29,78,216,.08);
     --serif:"IBM Plex Serif",Georgia,serif;
     --sans:"IBM Plex Sans",system-ui,sans-serif;
     --mono:"IBM Plex Mono",ui-monospace,monospace;
@@ -83,8 +83,16 @@
     padding:9px 15px;color:var(--ink);transition:background .2s,border-color .2s;
   }
   .links a:hover{background:var(--accent-soft);border-color:var(--accent)}
-  .portrait{aspect-ratio:4/5;background:#e9e8e2 url('https://placehold.co/600x750/e9e8e2/8b8e92?text=PHOTO') center/cover;
+  .portrait{aspect-ratio:4/5;max-width:260px;justify-self:end;
+    background:#eef0f4 url('https://placehold.co/520x650/eef0f4/8a8e94?text=PHOTO') center/cover;
     border:1px solid var(--line)}
+
+  /* ---- affiliation line ---- */
+  .affil{padding:24px 0}
+  .affil .row{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin-top:12px;
+    font-size:.96rem;color:var(--muted)}
+  .affil .row a{color:var(--accent);border-bottom:1px solid var(--accent)}
+  .affil .sep{color:var(--faint)}
 
   /* ---- sections ---- */
   section{padding:64px 0;border-top:1px solid var(--line)}
@@ -156,7 +164,7 @@
     .nav-links a{padding:14px 28px;width:100%;border-bottom:1px solid var(--line);border-left:2px solid transparent}
     .nav-links a.active{border-left-color:var(--accent);border-bottom-color:var(--line)}
     .hero-grid{grid-template-columns:1fr;gap:32px}
-    .portrait{max-width:260px}
+    .portrait{max-width:210px;justify-self:start}
     .cards,.two-col,.skills,.contact-grid{grid-template-columns:1fr}
     .two-col{gap:34px}
   }
@@ -170,7 +178,7 @@
 
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="#top">[[Your Name]]</a>
+    <a class="brand" href="#top">JeHyeon Seong</a>
     <button class="menu-btn" aria-expanded="false" aria-controls="navlinks">MENU</button>
     <nav class="nav-links" id="navlinks">
       <a href="#about">About</a>
@@ -188,18 +196,32 @@
   <section class="hero" id="top" style="border-top:none">
     <div class="wrap hero-grid">
       <div>
-        <h1>[[Your Name]]</h1>
-        <div class="role">[[PH.D. CANDIDATE]] · [[DEPARTMENT, UNIVERSITY]]</div>
-        <p class="lede">[[한 문장으로 본인의 연구를 소개하세요. 예: 데이터 기반 모델링으로 화학 공정의 설계와 최적화를 연구합니다.]]</p>
+        <h1>JeHyeon Seong</h1>
+        <div class="role">PH.D. CANDIDATE · ENERGY AND CHEMICAL ENGINEERING, GRADUATE SCHOOL OF CARBON NEUTRALITY, UNIST</div>
+        <p class="lede">Working where chemical engineering meets sustainablity : using data-driven modeling, process control, and optimization to move sustainable processes from concept toward scale-up.</p>
         <div class="links">
-          <a href="[[CV.pdf]]">CV (PDF)</a>
-          <a href="mailto:[[you@univ.ac.kr]]">Email</a>
-          <a href="[[https://scholar.google.com/...]]">Google Scholar</a>
-          <a href="[[https://github.com/you]]">GitHub</a>
-          <a href="[[https://linkedin.com/in/you]]">LinkedIn</a>
+          <!-- href="" 안의 빈칸만 본인 주소로 바꾸면 됩니다. 없는 항목은 그 <a> 줄을 통째로 지우세요. -->
+          <a href="">CV (PDF)</a>
+          <a href="mailto:tjdwpgus0505@unist.ac.kr">Email</a>
+          <a href="https://scholar.google.com/citations?user=iJRF7b8AAAAJ&hl=en&oi=ao">Google Scholar</a>
+          <a href="https://github.com/sojoonghae">GitHub</a>
+          <a href="">LinkedIn</a>
         </div>
       </div>
       <div class="portrait" role="img" aria-label="Profile photo"></div>
+    </div>
+  </section>
+
+  <!-- ===================== AFFILIATION ===================== -->
+  <section class="affil">
+    <div class="wrap reveal">
+      <div class="eyebrow">Affiliation</div>
+      <div class="row">
+        <span>Graduate School of Carbon Neutrality, UNIST</span>
+        <span class="sep">·</span>
+        <span>SPADE Lab</a> (Sustainable Process Analysis, Design, and Engineering)</span>
+        <span class="sep">·</span>
+      </div>
     </div>
   </section>
 
@@ -207,9 +229,10 @@
   <section id="about">
     <div class="wrap reveal">
       <div class="eyebrow">About</div>
-      <h2>[[연구자 한 줄 정체성]]</h2>
-      <p class="lead">[[2~3문장 자기소개. 어떤 문제를 풀고, 어떤 접근을 쓰며, 왜 그 일을 하는지. 학력·소속의 나열보다 '서사'로 쓰는 게 좋습니다.]]</p>
-      <p class="lead">[[연구 관심사: 키워드 4~6개를 자연스러운 문장으로. 예: 공정 시스템 공학, 수학적 모델링, 최적화, 머신러닝 응용.]]</p>
+      <h2>Bridging data and process engineering for carbon neutrality</h2>
+      <p class="lead">I am a Ph.D. candidate in the SPADE Lab at UNIST, working at the intersection of chemical engineering and carbon neutrality. My research uses data — not only first-principles engineering — to model, control, and optimize chemical and energy processes, and I am particularly interested in how to bridge data gaps when the measurements needed for modeling or control are scarce.</p>
+      <p class="lead">Looking further ahead, I want to connect these methods through multi-scale modeling, carrying a process from simulation toward scale-up, demonstration, and eventually the commercialization of sustainable technologies.</p>
+      <p class="lead">Research interests: numerical modeling, process modeling, process control, machine learning, reinforcement learning, process automation, data generation, techno-economic analysis (TEA), life cycle assessment (LCA), and process optimization.</p>
     </div>
   </section>
 
@@ -218,32 +241,20 @@
     <div class="wrap reveal">
       <div class="eyebrow">Research</div>
       <h2>Research &amp; Funded Projects</h2>
-      <p class="lead">[[연구 전체를 묶는 한 단락(영문으로 작성). 큰 질문과 방법론을 먼저 말하고, 아래 카드에서 개별 과제를 보여줍니다.]]</p>
+      <p class="lead">My published work centers on techno-economic and environmental assessment of emerging energy and chemical processes — from renewable olefins to nuclear-driven methanol and ammonia co-production — together with process modeling and multi-criteria decision analysis. Funded research projects will be listed below.</p>
       <div class="cards">
-        <!-- 과제 카드: h3에 국문 공식 과제명, <span class="alt">에 영문 번역.
-             국제 과제라 영문이 우선이면 둘 위치를 바꿔도 됩니다. 카드는 필요한 만큼 복제하세요. -->
+        <!-- TODO(과제): 연구실에서 과제 내역 확인 후 채우기.
+             h3에 국문 공식 과제명, <span class="alt">에 영문 번역. 카드는 필요한 만큼 복제하세요. -->
         <div class="card">
-          <div class="meta">[[2023 – 2026]] · [[Role: 연구책임자 / 참여연구원]]</div>
-          <h3>[[차세대 분리공정 디지털 트윈 개발]]<span class="alt">[[Development of a Digital Twin for Next-Generation Separation Processes]]</span></h3>
-          <p>[[과제 한두 줄 요약(영문). 목표와 본인의 기여.]]</p>
-          <span class="tag">[[NRF · 한국연구재단]]</span>
-        </div>
-        <div class="card">
-          <div class="meta">[[2021 – 2023]] · [[역할]]</div>
-          <h3>[[국문 과제명]]<span class="alt">[[English project title]]</span></h3>
-          <p>[[요약(영문).]]</p>
-          <span class="tag">[[지원기관 · ENG]]</span>
-        </div>
-        <div class="card">
-          <div class="meta">[[기간]] · [[역할]]</div>
-          <h3>[[국문 과제명]]<span class="alt">[[English project title]]</span></h3>
-          <p>[[요약(영문).]]</p>
+          <div class="meta">[[기간 예: 2024 – 2027]] · [[역할: 참여연구원 등]]</div>
+          <h3>[[국문 공식 과제명]]<span class="alt">[[English project title]]</span></h3>
+          <p>[[한두 줄 요약: 목표와 본인의 기여 (영문).]]</p>
           <span class="tag">[[지원기관]]</span>
         </div>
         <div class="card">
           <div class="meta">[[기간]] · [[역할]]</div>
-          <h3>[[국문 과제명]]<span class="alt">[[English project title]]</span></h3>
-          <p>[[요약(영문).]]</p>
+          <h3>[[국문 공식 과제명]]<span class="alt">[[English project title]]</span></h3>
+          <p>[[요약 (영문).]]</p>
           <span class="tag">[[지원기관]]</span>
         </div>
       </div>
@@ -260,17 +271,25 @@
         <div class="pub">
           <span class="num">[1]</span>
           <div>
-            <div class="title">[[논문 제목]]</div>
-            <div class="authors"><b>[[Your Name]]</b>, [[공저자들]]</div>
-            <div class="venue">[[Journal Name]], [[Vol/Year]] · [[DOI 또는 링크]]</div>
+            <div class="title">Design consideration with dividing wall column for production of renewable olefins with economic, environmental, energy, and exergy (4Es) criteria</div>
+            <div class="authors">Heehyang Kim, <b>JeHyeon Seong</b>, Hosanna Uwitonze*, Hankwon Lim*</div>
+            <div class="venue">Journal of Cleaner Production (2025) 145292</div>
           </div>
         </div>
         <div class="pub">
           <span class="num">[2]</span>
           <div>
-            <div class="title">[[논문 제목]]</div>
-            <div class="authors">[[공저자]], <b>[[Your Name]]</b></div>
-            <div class="venue">[[Journal Name]], [[Year]]</div>
+            <div class="title">Techno-economic analysis and environmental assessment of methanol and ammonia co-production powered by nuclear and Cu–Cl cycle driven hydrogen</div>
+            <div class="authors"><b>JeHyeon Seong</b>, Donghyoun Lee, Mingi Kim, Hankwon Lim*</div>
+            <div class="venue">Journal of Environmental Chemical Engineering, 13 (2025) 119992</div>
+          </div>
+        </div>
+        <div class="pub">
+          <span class="num">[3]</span>
+          <div>
+            <div class="title">Prospects of power-to-sustainable aviation fuel: A multi-criteria decision analysis integrated with economic and environmental assessment</div>
+            <div class="authors">Mingi Kim, Aejin Lee, <b>JeHyeon Seong</b>, Hankwon Lim*</div>
+            <div class="venue">Renewable Energy, 263 (2026) 125455</div>
           </div>
         </div>
       </div>
@@ -279,9 +298,9 @@
         <div class="pub">
           <span class="num">[C1]</span>
           <div>
-            <div class="title">[[발표 제목]]</div>
-            <div class="authors"><b>[[Your Name]]</b>, [[공저자]]</div>
-            <div class="venue">[[학회명, 장소, 연도]]</div>
+            <div class="title">Techno-economic analysis and environmental assessment of methanol and ammonia co-production powered by nuclear and Cu–Cl cycle driven hydrogen</div>
+            <div class="authors"><b>JeHyeon Seong</b></div>
+            <div class="venue">Poster · 2026 KIChE Spring Meeting (한국화학공학회 봄 총회 및 학술대회), Jeju, Korea</div>
           </div>
         </div>
       </div>
@@ -297,32 +316,22 @@
         <div>
           <h4 class="meta" style="margin-bottom:16px">PROFESSIONAL / RESEARCH</h4>
           <div class="tl-item">
-            <div class="meta">[[2024 – Present]]</div>
-            <h3>[[직책 — 예: 박사후연구원]]</h3>
-            <p>[[소속 · 한 줄 설명]]</p>
-          </div>
-          <div class="tl-item">
-            <div class="meta">[[2019 – 2024]]</div>
-            <h3>[[직책 / 연구실]]</h3>
-            <p>[[소속]]</p>
-          </div>
-          <div class="tl-item">
-            <div class="meta">[[2018]]</div>
-            <h3>[[인턴 — 산업체 경험]]</h3>
-            <p>[[회사 · 팀]]</p>
+            <div class="meta">[[연도 입력 예: 2020 – 2021]]</div>
+            <h3>Research Intern</h3>
+            <p>Korea Research Institute of Chemical Technology.</p>
           </div>
         </div>
         <div>
           <h4 class="meta" style="margin-bottom:16px">EDUCATION</h4>
           <div class="tl-item">
-            <div class="meta">[[2019 – 2024]]</div>
-            <h3>[[Ph.D. in 전공]]</h3>
-            <p>[[대학 · 지도교수 (선택)]]</p>
+            <div class="meta">2024 – Present</div>
+            <h3>Integrated M.S./Ph.D., Chemical Engineering</h3>
+            <p>UNIST · Advisor: <a href="https://spade.unist.ac.kr/" target="_blank" rel="noopener" style="color:var(--accent);border-bottom:1px solid var(--accent)">Prof. Hankwon Lim</a></p>
           </div>
           <div class="tl-item">
-            <div class="meta">[[2015 – 2019]]</div>
-            <h3>[[B.S. in 전공]]</h3>
-            <p>[[대학]]</p>
+            <div class="meta">2016 – 2024</div>
+            <h3>B.S. in Chemical Engineering</h3>
+            <p>University of Ulsan</p>
           </div>
         </div>
       </div>
@@ -337,15 +346,15 @@
       <div class="skills">
         <div>
           <h4>Programming</h4>
-          <div class="chips"><span>Python</span><span>MATLAB</span><span>C++</span><span>R</span></div>
+          <div class="chips"><span>Python</span><span>MATLAB</span></div>
         </div>
         <div>
-          <h4>Tools / Simulation</h4>
-          <div class="chips"><span>Aspen Plus</span><span>gPROMS</span><span>PyTorch</span><span>Git</span></div>
+          <h4>Tools / Software</h4>
+          <div class="chips"><span>Aspen Plus</span><span>Aspen HYSYS</span><span>Aveva Process Simulation</span><span>PyTorch</span><span>TensorFlow</span><span>OpenLCA</span><span>GREET</span></div>
         </div>
         <div>
           <h4>Methods</h4>
-          <div class="chips"><span>Modeling</span><span>Optimization</span><span>Machine Learning</span><span>Design of Experiments</span></div>
+          <div class="chips"><span>Process Modeling &amp; Simulation</span><span>Techno-economic Analysis</span><span>Life Cycle Assessment</span><span>Process Optimization</span><span>Multi-criteria Decision Analysis</span><span>Machine Learning</span><span>Reinforcement Learning</span><span>Process Control</span></div>
         </div>
       </div>
     </div>
@@ -357,9 +366,8 @@
       <div class="eyebrow">Honors</div>
       <h2>Honors &amp; Fellowships</h2>
       <ul class="awards">
-        <li><span class="yr">[[2025]]</span><span>[[수상/장학 명칭 — 수여기관]]</span></li>
-        <li><span class="yr">[[2023]]</span><span>[[수상/장학 명칭 — 수여기관]]</span></li>
-        <li><span class="yr">[[2021]]</span><span>[[수상/장학 명칭 — 수여기관]]</span></li>
+        <li><span class="yr">2025</span><span>Scholarship, HYUNSONG Educational &amp; Cultural Foundation</span></li>
+        <li><span class="yr">2023</span><span>Award, Korea Process Simulation Olympiad 2023</span></li>
       </ul>
     </div>
   </section>
@@ -369,15 +377,12 @@
     <div class="wrap reveal">
       <div class="eyebrow">Contact</div>
       <h2>Contact</h2>
-      <p class="lead">[[협업·문의 환영 한 줄.]]</p>
       <div class="contact-grid">
         <div>
           <span class="meta">EMAIL</span>
-          <a href="mailto:[[you@univ.ac.kr]]">[[you@univ.ac.kr]]</a>
+          <a href="mailto:tjdwpgus0505@unist.ac.kr">tjdwpgus0505@unist.ac.kr</a>
         </div>
         <div>
-          <span class="meta">OFFICE</span>
-          <p>[[건물 · 호실 · 주소]]</p>
         </div>
       </div>
     </div>
